@@ -1,4 +1,4 @@
-{% set version = '3012.100' %}
+{% set version = '3042.101' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/timeDate_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/timeDate/timeDate_{{ version }}.tar.gz
-  sha256: 6262ef7ca9f5eeb9db8229d6bb7a51d46d467a4fa73e2ccc5b4b78e18780c432
+  sha256: 6c8d4c7689b31c6a43555d9c7258516556ba03b132e5643691e3e317b89a8c6d
 
 
   # patches:
@@ -21,7 +21,7 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build number.
-  number: 4
+  number: 0
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -51,8 +51,13 @@ test:
 about:
   home: https://www.rmetrics.org
   license: GPL (>= 2)
-  summary: Environment for teaching  "Financial Engineering and Computational Finance". Managing
-    chronological and calendar objects.
+  summary: The 'timeDate' class fulfils the conventions of the ISO 8601  standard as well as
+    of the ANSI C and POSIX standards. Beyond these standards it provides the "Financial
+    Center" concept which allows to handle data records collected in different time  zones
+    and mix them up to have always the proper time stamps with  respect to your personal
+    financial center, or alternatively to the GMT reference time. It can thus also handle
+    time stamps from historical  data records from the same time zone, even if the financial  centers
+    changed day light saving times at different calendar dates.
   license_family: GPL3
 
 extra:
@@ -64,21 +69,20 @@ extra:
 
 # Package: timeDate
 # Title: Rmetrics - Chronological and Calendar Objects
-# Date: 2015-01-22
-# Version: 3012.100
-# Author: Rmetrics Core Team, Diethelm Wuertz [aut], Tobias Setz [cre], Yohan Chalabi [ctb], Martin Maechler [ctb], Joe W. Byers [ctb]
-# Maintainer: Tobias Setz <tobias.setz@rmetrics.org>
-# Description: Environment for teaching  "Financial Engineering and Computational Finance". Managing chronological and calendar objects.
+# Date: 2017-11-12
+# Version: 3042.101
+# Author: Diethelm Wuertz [aut], Tobias Setz [cre], Yohan Chalabi [ctb], Martin Maechler [ctb], Joe W. Byers [ctb]
+# Maintainer: Tobias Setz <tobias.setz@live.com>
+# Description: The 'timeDate' class fulfils the conventions of the ISO 8601  standard as well as of the ANSI C and POSIX standards. Beyond these standards it provides the "Financial Center" concept which allows to handle data records collected in different time  zones and mix them up to have always the proper time stamps with  respect to your personal financial center, or alternatively to the GMT reference time. It can thus also handle time stamps from historical  data records from the same time zone, even if the financial  centers changed day light saving times at different calendar dates.
 # Depends: R (>= 2.15.1), graphics, utils, stats, methods
 # Suggests: date, RUnit
-# Note: SEVERAL PARTS ARE STILL PRELIMINARY AND MAY BE CHANGED IN THE FUTURE. THIS TYPICALLY INCLUDES FUNCTION AND ARGUMENT NAMES, AS WELL AS DEFAULTS FOR ARGUMENTS AND RETURN VALUES.
 # LazyData: yes
 # License: GPL (>= 2)
 # URL: https://www.rmetrics.org
-# Packaged: 2015-01-23 00:36:51 UTC; Tobi
 # NeedsCompilation: no
+# Packaged: 2017-11-16 17:28:04 UTC; Tobias Setz
 # Repository: CRAN
-# Date/Publication: 2015-01-23 09:30:30
+# Date/Publication: 2017-11-16 22:08:03 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
