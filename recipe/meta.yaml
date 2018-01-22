@@ -10,8 +10,8 @@ package:
 source:
   fn: timeDate_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/timeDate_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/timeDate/timeDate_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/timeDate_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/timeDate/timeDate_{{ version }}.tar.gz
   sha256: 6c8d4c7689b31c6a43555d9c7258516556ba03b132e5643691e3e317b89a8c6d
 
 
