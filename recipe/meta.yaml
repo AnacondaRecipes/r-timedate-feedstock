@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: timeDate_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/timeDate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/timeDate/timeDate_{{ version }}.tar.gz
@@ -27,6 +26,7 @@ build:
 # Suggests: date, RUnit
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
